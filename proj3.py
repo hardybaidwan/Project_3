@@ -111,8 +111,7 @@ def object_detection():
     img_rgb_ = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     eye = cv2.CascadeClassifier('haarcascade_eye.xml')
-    found = eye.detectMultiScale(img_gray_,
-                                 minSize=(20, 20))
+    found = eye.detectMultiScale(img_gray_,minSize=(20, 20))
     amount_found_ = len(found)
 
     if amount_found_ != 0:
